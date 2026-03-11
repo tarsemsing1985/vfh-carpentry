@@ -1,0 +1,107 @@
+@font-face {
+  font-family: "Fraunces";
+  src: url("/assets/fonts/Fraunces.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/assets/fonts/GeneralSans-Variable.woff2") format("woff2");
+  font-weight: 200 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0.97 0.012 75;
+    --foreground: 0.2 0.03 50;
+
+    --card: 0.975 0.01 72;
+    --card-foreground: 0.2 0.03 50;
+
+    --popover: 0.975 0.01 72;
+    --popover-foreground: 0.2 0.03 50;
+
+    --primary: 0.52 0.1 52;
+    --primary-foreground: 0.97 0.01 72;
+
+    --secondary: 0.91 0.022 72;
+    --secondary-foreground: 0.25 0.04 50;
+
+    --muted: 0.93 0.018 70;
+    --muted-foreground: 0.5 0.04 58;
+
+    --accent: 0.36 0.07 44;
+    --accent-foreground: 0.97 0.01 72;
+
+    --destructive: 0.55 0.18 27;
+    --destructive-foreground: 0.97 0.01 72;
+
+    --border: 0.88 0.025 68;
+    --input: 0.88 0.025 68;
+    --ring: 0.52 0.1 52;
+
+    --radius: 0.375rem;
+
+    --chart-1: 0.52 0.1 52;
+    --chart-2: 0.36 0.07 44;
+    --chart-3: 0.65 0.09 68;
+    --chart-4: 0.45 0.08 48;
+    --chart-5: 0.7 0.07 72;
+
+    --sidebar: 0.96 0.015 72;
+    --sidebar-foreground: 0.2 0.03 50;
+    --sidebar-primary: 0.52 0.1 52;
+    --sidebar-primary-foreground: 0.97 0.01 72;
+    --sidebar-accent: 0.91 0.022 72;
+    --sidebar-accent-foreground: 0.25 0.04 50;
+    --sidebar-border: 0.88 0.025 68;
+    --sidebar-ring: 0.52 0.1 52;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .wood-grain {
+    background-image: repeating-linear-gradient(
+      92deg,
+      transparent,
+      transparent 2px,
+      oklch(0.52 0.1 52 / 0.03) 2px,
+      oklch(0.52 0.1 52 / 0.03) 4px
+    );
+  }
+
+  .hero-overlay {
+    background: linear-gradient(
+      to right,
+      oklch(0.1 0.03 50 / 0.82) 0%,
+      oklch(0.1 0.03 50 / 0.55) 50%,
+      oklch(0.1 0.03 50 / 0.2) 100%
+    );
+  }
+}
